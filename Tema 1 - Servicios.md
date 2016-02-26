@@ -1,5 +1,5 @@
 ###Ejercicio 1: ¿A que sirven los siguientes servicios?
-[!servicios](./images/servicios.png)
+![servicios](./images/servicios.png)
 ######Apache
 Apache HTTP Server proporciona un servidor web HTTP modular, multi-plataforma y extensible. Es el mas popular y usado entre los servicios HTTP disponibles. Se usa para enviar paginas web estaticas y dinamicas en la Web (HTTP es un protocolo PULL) y para proporcionar acceso a otros servicios (aplicaciones web) que hay en el servidor.
 ######nginx
