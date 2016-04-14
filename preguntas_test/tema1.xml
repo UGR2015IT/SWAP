@@ -1,0 +1,24 @@
+<pregunta>
+   <enunciado>Cual de los siguientes no es un beneficio de usar una granja web?</enunciado>
+   <opcionA>ahorro de costes</opcionA>
+   <opcionB>flexibilidad</opcionB>
+   <opcionC>escalabilidad</opcionC>
+   <opcionD>baja sobrecarga</opcionD>
+   <solucion>A</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Que se entiende por cold spare server?</enunciado>
+   <opcionA>Servidor que se pone en la DMZ</opcionA>
+   <opcionB>maquina con bajo calientamento de la CPU</opcionB>
+   <opcionC>replica de maquina servidor</opcionC>
+   <opcionD>servidor con poco trafico</opcionD>
+   <solucion>c</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Cual es la definicion de escalabilidad?</enunciado>
+   <opcionA>posibilidad de tener un servidor online 24/7</opcionA>
+   <opcionB>capacidad para dar soporte a un numero creciente de usuarios</opcionB>
+   <opcionC>configurar maquinas de manera que cada una ofrezca un servicio diferente</opcionC>
+   <opcionD>baja probabilidad de fallo de un sistema</opcionD>
+   <solucion>B</solucion>
+</pregunta>

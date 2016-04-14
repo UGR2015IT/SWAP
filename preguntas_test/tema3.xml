@@ -1,0 +1,24 @@
+<pregunta>
+   <enunciado>Todos los demas son desventajas de una configuracion sin DMZ, sino que uno. Cual?</enunciado>
+   <opcionA>comparticion del ancho de banda</opcionA>
+   <opcionB>asegur los servidore mas complejo</opcionB>
+   <opcionC>complejidad en la configuracion de front-rail y back-rail</opcionC>
+   <opcionD>un servidor comprometido expone a atacos todos los demas</opcionD>
+   <solucion>C</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Cual configuracion de zona segura tiene un front-rail y un back-rail?</enunciado>
+   <opcionA>sin DMZ</opcionA>
+   <opcionB>DMZ simple</opcionB>
+   <opcionC>DMZ tradicional</opcionC>
+   <opcionD>DMZ doble</opcionD>
+   <solucion>D</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>En el QOS (Quality of Service, calidad de servicio) NO influye:</enunciado>
+   <opcionA>ancho de banda de conexion a Internet</opcionA>
+   <opcionB>velocidad de ordenador del usuario</opcionB>
+   <opcionC>filtrado y bloqueo de paquetes</opcionC>
+   <opcionD>balanceo de carga entre servidores</opcionD>
+   <solucion>B</solucion>
+</pregunta>

@@ -1,0 +1,24 @@
+<pregunta>
+   <enunciado>El tiempo de no-disponibilidad puede ser:</enunciado>
+   <opcionA>redundante u no redundante</opcionA>
+   <opcionB>de primero, segundo o tercer nivel</opcionB>
+   <opcionC>programado o no programado</opcionC>
+   <opcionD>ideal o efectivo</opcionD>
+   <solucion>C</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Proveedores de servicios como Google, Facebook, y otros intentan de tener un periodo de caida de servicios en un anio en el orden de:</enunciado>
+   <opcionA>minutos (3 nueves)</opcionA>
+   <opcionB>horas (1 nueve)</opcionB>
+   <opcionC>dias (0 nueves)</opcionC>
+   <opcionD>microsegundos (6 nueves)</opcionD>
+   <solucion>A</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Cual entre estos es un tipo de ampliacion HORIZONTAL?</enunciado>
+   <opcionA>incrementar RAM</opcionA>
+   <opcionB>incrementar CPU</opcionB>
+   <opcionC>aniadir maquinas</opcionC>
+   <opcionD>aniadir un disco duro</opcionD>
+   <solucion>C</solucion>
+</pregunta>

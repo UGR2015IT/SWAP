@@ -1,0 +1,24 @@
+<pregunta>
+   <enunciado>Cual no es un ALGORITMO de balanceo de carga?</enunciado>
+   <opcionA>Balanceo global</opcionA>
+   <opcionB>Balanceo basado en prioridad</opcionB>
+   <opcionC>Balanceo basado en numero de conexiones</opcionC>
+   <opcionD>Balanceo basado en tiempo de respuesta</opcionD>
+   <solucion>A</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Un balanceo con dispositivo HW tiene muchas funcionalidades, pero una de las siguientes no es entre ellas:</enunciado>
+   <opcionA>repartir trafico entre servidores de la granja</opcionA>
+   <opcionB>servir contenido estatico directamente como si fue cache</opcionB>
+   <opcionC>aniadir capacidad de calculo compartendo con la red su procesadores</opcionC>
+   <opcionD>hacer traduccion NAT</opcionD>
+   <solucion>C</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Cual de lo siguientes mecanismos de redericionamiento necesita dos accesos (con problemas de latencia)?</enunciado>
+   <opcionA>redireccion HTTP</opcionA>
+   <opcionB>redireccion HTTP con HTML</opcionB>
+   <opcionC>redireccion HTTP con JS</opcionC>
+   <opcionD>redireccion HTTP con PHP</opcionD>
+   <solucion>A</solucion>
+</pregunta>
