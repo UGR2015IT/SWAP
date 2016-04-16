@@ -3,4 +3,4 @@ Course of "Servidores web de alta prestaciones" @ UGR ETSIIT, academic year 2015
 
 Trabajan sobre este repositorio:
 - [Davide Gallitelli](https://github.com/dgallitelli)
-- [Juan Ramon Mossa] (https://github.com/mjramon15)
+- [Juan Ramon Mossa](https://github.com/mjramon15)
