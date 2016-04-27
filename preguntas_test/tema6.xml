@@ -1,0 +1,40 @@
+<pregunta>
+    <enunciado>Cual es la mejor manera para asegurar seguridad a nivel de administracion?</enunciado>
+    <opcionA>tener ninguna cuenta de administrador</opcionA>
+    <opcionB>tener mas cuentas de administrador con diferentes tareas</opcionB>
+    <opcionC>acceder de VPN</opcionC>
+    <opcionD>tener cuentas de servicios</opcionD>
+    <solucion>C</solucion>
+</pregunta>
+<pregunta>
+    <enunciado>Porque serìa mejor tener un sistema de proteccion de mas niveles?</enunciado>
+    <opcionA>Para complicarle la tarea de acceder a los datos a un hacker y para detectarle en tiempo</opcionA>
+    <opcionB>Para que se aproveche mejor la arquitectura escalable de los servidores</opcionB>
+    <opcionC>Para que la tarea de asegurar proteccion se pueda compartir entre mas personas</opcionC>
+    <opcionD>Para mitigar mejor ataques DDoS</opcionD>
+    <solucion>A</solucion>
+</pregunta>
+<pregunta>
+    <enunciado>Cual de los siguientes no se usa para seguridad a nivel fisico?</enunciado>
+    <opcionA>Cerradura de seguridad al sitio de ubicacion de servidores</opcionA>
+    <opcionB>Vigilancia mediante CCTV</opcionB>
+    <opcionC>Contraseñas de BIOS y consola</opcionC>
+    <opcionD>Cuentas de Servicios</opcionD>
+    <solucion>D</solucion>
+</pregunta>
+<pregunta>
+    <enunciado>Una cuenta de administrador representa un fallo de seguridad si:</enunciado>
+    <opcionA>se renombra y se cambia la contraseña</opcionA>
+    <opcionB>al cambiar de administrador fisico, no se actualizan el sistema operativo</opcionB>
+    <opcionC>se ejecutan servicios como root o superusuario</opcionC>
+    <opcionD>se disfruta de un sistema da autenticacion en dos etapas (como con codigo por SMS o aplicacion)</opcionD>
+    <solucion>C</solucion>
+</pregunta>
+<pregunta>
+    <enunciado>Cual seria la mejor configuracion por defecto de un cortafuego por iptable?</enunciado>
+    <opcionA>denegar todas las comunicacciones (INPUT/OUTPUT/FORWARD DROP) y luego abrir puertos especificos</opcionA>
+    <opcionB>Permitir todas las comunicaciones (INPUT/OUTPUT/FORWARD DROP) y luego cerrar los puertos no deseados</opcionB>
+    <opcionC>Permitir PING a todas las maquinas de la granja</opcionC>
+    <opcionD>Cerrar el puerto 80 para que no puedan llegar ataques desde internet</opcionD>
+    <solucion>A</solucion>
+</pregunta>
