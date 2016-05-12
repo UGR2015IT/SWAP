@@ -1,0 +1,40 @@
+<pregunta>
+   <enunciado>Como se puede estimar adecuadamente el hardware necesario para un servidor web?</enunciado>
+   <opcionA>Poner mas y seguir quitando</opcionA>
+   <opcionB>Escuchar lo que opina el vendedor</opcionB>
+   <opcionC>Monitorizar el hardware en el sistema en producion</opcionC>
+   <opcionD>Monitorizar el hardware en el sistema a traves software de monitorizacion especifico para buscar cuellos de botella</opcionD>
+   <solucion>D</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Sobre los servidores WEB es cierto que:</enunciado>
+   <opcionA>probablemente se necesita mas CPU que RAM</opcionA>
+   <opcionB>se necesitan igual RAM y almacenamiento</opcionB>
+   <opcionC>probablemente se necesita mas RAM que CPU</opcionC>
+   <opcionD>cuanta mas CPU mejor, 1 GB de RAM serìa mas que bastante</opcionD>
+   <solucion>C</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Cual es el modelo de centro de datos de Google desde el 2005?</enunciado>
+   <opcionA>modularizado mediante contenedores</opcionA>
+   <opcionB>microservidores con conexion PCI-E</opcionB>
+   <opcionC>servidores en rack conectados por Infiniband</opcionC>
+   <opcionD>Google no hace falta de centro de datos porque tiene todo en la nube</opcionD>
+   <solucion>A</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Que es HP Sizer?</enunciado>
+   <opcionA>Dispositivo de Almacenamiento</opcionA>
+   <opcionB>Sistema de alimentacion ininterrumpida</opcionB>
+   <opcionC>Antivirus</opcionC>
+   <opcionD>Software para determinar necesidades del servidor</opcionD>
+   <solucion>D</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>El proyecto Open Compute Project fue lanzado por:</enunciado>
+   <opcionA>Google</opcionA>
+   <opcionB>Samsung</opcionB>
+   <opcionC>Facebook</opcionC>
+   <opcionD>IBM</opcionD>
+   <solucion>C</solucion>
+</pregunta>

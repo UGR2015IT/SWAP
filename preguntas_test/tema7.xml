@@ -1,0 +1,24 @@
+<pregunta>
+   <enunciado>Que RAID se suele usar para bases de datos de alta prestaciones?</enunciado>
+   <opcionA>RAID 5</opcionA>
+   <opcionB>RAID 6</opcionB>
+   <opcionC>RAID 10</opcionC>
+   <opcionD>Cualquiera de las precedentes es corecta</opcionD>
+   <solucion>C</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Cual de estas no es una caracteristica de los discos RAID?</enunciado>
+   <opcionA>No facilita mover datos a un sistema nuevo</opcionA>
+   <opcionB>Protege los datos</opcionB>
+   <opcionC>No simplifica la recuperacion de un disastre</opcionC>
+   <opcionD>Cualquiera de las precedentes es una caracteristica de los RAID</opcionD>
+   <solucion>B</solucion>
+</pregunta>
+<pregunta>
+   <enunciado>Cual de las siguientes es una propriedad de los RAID 1?</enunciado>
+   <opcionA>Permite hacer backup sobre un disco inactivo secundario mientras que el primero sigue dando servicio</opcionA>
+   <opcionB>Usa division a nivel de bloques</opcionB>
+   <opcionC>Protege los datos antes virus</opcionC>
+   <opcionD>El el mejor sistema de archivos existente</opcionD>
+   <solucion>A</solucion>
+</pregunta>
