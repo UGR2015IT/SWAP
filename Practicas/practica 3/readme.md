@@ -35,3 +35,12 @@ Una vez reiniciado el servicio de _nginx_, el balanceador empieza a redirecciona
     curl http://192.168.210.130
 
 ![exitoP3](./images/exito.png)
+
+Probamos ahora el funcionamiento con algoritmo en ponderacion, con la prioridad de la maquina M2 dos veces la de M1. Serà suficiente insertar las siguientes lineas en el mismo fichero _/etc/nginx/conf.d/default.conf_ :
+
+        upstream apaches {
+            server 192.168.210.128 weight=1;
+            server 192.168.210.129 weight=2;
+        }
+
+![exitoP3](./images/exitonginxweight.png)
