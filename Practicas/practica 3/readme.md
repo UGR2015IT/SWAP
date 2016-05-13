@@ -2,13 +2,13 @@
 
 ##### Seccion 1: _Nginx_
 
-Para esta practica, hemos arrancado una tercera maquina (M3@192.168.1.130) en la que hemos instalado el servicio _nginx_. Esta maquina M3 va a trabajar como balanceador de carga para el cluster hecho por las maquinas M1@192.168.1.110 y M2@192.168.1.120.
+Para esta practica, hemos arrancado una tercera maquina (M3@192.168.210.130) en la que hemos instalado el servicio _nginx_. Esta maquina M3 va a trabajar como balanceador de carga para el cluster hecho por las maquinas M1@192.168.210.128 y M2@192.168.210.129.
 
 Empezamos configurando el servicio _nginx_ modificando el fichero de configuracion _/etc/nginx/conf.d/default.conf_ de manera que sepa la granja con la que tiene que trabajar:
 
         upstream apaches {
-            server 172.16.168.130;
-            server 172.16.168.131;
+            server 192.168.210.128;
+            server 192.168.210.129;
         }
         server {
             listen 80;
@@ -31,6 +31,7 @@ Empezamos configurando el servicio _nginx_ modificando el fichero de configuraci
 
 Una vez reiniciado el servicio de _nginx_, el balanceador empieza a redireccionar el trafico que llega a el mismo a las dos maquinas de la granja repartendolo por turnos (round-robin). Esto se puede comprobar hacendo una descarga de las paginas web de las dos maquinas que, si modificadas previamente, seran distintas.
 
-        curl http://192.168.1.130
-        curl http://192.168.1.130
+        curl http://192.168.210.130
+    curl http://192.168.210.130
 
+![exitoP3](./images/exito.png)
