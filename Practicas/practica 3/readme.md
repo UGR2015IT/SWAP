@@ -34,7 +34,7 @@ Una vez reiniciado el servicio de _nginx_, el balanceador empieza a redirecciona
         curl http://192.168.210.130
     curl http://192.168.210.130
 
-![exitoP3](./images/exito.png)
+![exitoP3](./images/exitonginx.png)
 
 Probamos ahora el funcionamiento con algoritmo en ponderacion, con la prioridad de la maquina M2 dos veces la de M1. Serà suficiente insertar las siguientes lineas en el mismo fichero _/etc/nginx/conf.d/default.conf_ :
 
@@ -44,3 +44,39 @@ Probamos ahora el funcionamiento con algoritmo en ponderacion, con la prioridad 
         }
 
 ![exitoP3](./images/exitonginxweight.png)
+
+##### Seccion 2: _Haproxy_
+
+Arrancamos una maquina virtual M31@192.168.210.132 que tiene instalado haproxy. Configuramos el fichero _/etc/haproxy/haproxy.cfg_:
+
+    global
+        daemon
+        maxconn 256
+    defaults
+        mode http
+        contimeout 4000
+        clitimeout 42000
+        srvtimeout 43000
+    frontend http-in
+        bind *:80
+        default_backend servers
+    backend servers
+        server m1 172.16.168.130:80 maxconn 32
+        server m2 172.16.168.131:80 maxconn 32
+
+![confighaproxy](./images/exitonginx.png)
+
+y comprobamos que todo funcione bien:
+
+![exitohaproxy](./images/exitohaproxy.png)
+
+Es posible configurar la granja para que la maquina M2 tenga mas peso que la M1, y comprobamos esta configuracion:
+
+    backend servers
+        server m1 172.16.168.130:80 maxconn 32 weight 1
+        server m2 172.16.168.131:80 maxconn 32 weight 2
+
+![confighaproxyweight](./images/confighaproxyweight.png)
+
+
+![exitohaproxyweight](./images/exitohaproxyweight.png)
