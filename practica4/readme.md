@@ -56,3 +56,15 @@ openload -l 20 http://192.168.210.128/ 1000
 Para tener medidas apropriadas, vamos a tomar las mediciones mas de una vez, en particular 10 veces y obtenemos la siguiente tabla:
 
 ![tablaSingleOpenWebLoad](./images/tablaSingleOpenWebLoad.PNG)
+
+###### Seccion 3.2: granja nginx
+
+![tablaOWLNginx](./images/tablaOWLNginx.PNG)
+
+###### Seccion 3.3: granja haproxy
+
+![tablaOWLhaproxy](./images/tablaOWLhaproxy.PNG)
+
+###### Seccion 3.4: Resultados 
+
+![grafoOWL](./images/grafoOWL.PNG)
