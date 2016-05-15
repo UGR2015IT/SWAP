@@ -27,6 +27,18 @@ Para tener medidas apropriadas, vamos a tomar las mediciones mas de una vez, en 
 
 ![tablaSingleAB](./images/tablaSingleAB.PNG)
 
+###### Seccion 2.2: granja nginx
+
+![tablaABNginx](./images/tablaABNginx.PNG)
+
+###### Seccion 2.3: granja haproxy
+
+![tablaABHaproxy](./images/tablaABHaproxy.PNG)
+
+###### Seccion 2.4: Resultados 
+
+![grafoAB](./images/grafoAB.PNG)
+
 ##### Seccion 2: _Siege_
 
 ###### Seccion 2.1: servidor unico
@@ -42,6 +54,18 @@ siege -b -t20S -v http://192.168.210.128/
 Para tener medidas apropriadas, vamos a tomar las mediciones mas de una vez, en particular 10 veces y obtenemos la siguiente tabla:
 
 ![tablaSingleSiege](./images/tablaSingleSiege.PNG)
+
+###### Seccion 2.2: granja nginx
+
+![tablaSiegeNginx](./images/tablaSiegeNginx.PNG)
+
+###### Seccion 2.3: granja haproxy
+
+![tablaSiegeHaproxy](./images/tablaSiegeHaproxy.PNG)
+
+###### Seccion 2.4: Resultados 
+
+![grafoSiege](./images/grafoSiege.PNG)
 
 ##### Seccion 3: _OpenWebLoad_
 
