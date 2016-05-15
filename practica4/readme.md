@@ -20,12 +20,12 @@ Como primera etapa, intentamos la comprobacion de rendimiento de la maquina _M1@
 ab -n 1000 -c 10 http://192.168.210.128/index.html
 ```
 
-[!singleAB_1](./images/singleAB_1.png)
-[!singleAB_2](./images/singleAB_2.png)
+![singleAB_1](./images/singleAB_1.png)
+![singleAB_2](./images/singleAB_2.png)
 
 Para tener medidas apropriadas, vamos a tomar las mediciones mas de una vez, en particular 7 veces, cada una pedendo la pagina 10000 veces con concurrencia 20 y obtenemos la siguiente tabla:
 
-[!tablaSingleAB](./images/tablaSingleAB.png)
+![tablaSingleAB](./images/tablaSingleAB.png)
 
 ##### Seccion 2: _Siege_
 
@@ -37,11 +37,11 @@ Como primera etapa, intentamos la comprobacion de rendimiento de la maquina _M1@
 siege -b -t20S -v http://192.168.210.128/
 ```
 
-[!singleSiege](./images/singleSiege.png)
+![singleSiege](./images/singleSiege.png)
 
 Para tener medidas apropriadas, vamos a tomar las mediciones mas de una vez, en particular 10 veces y obtenemos la siguiente tabla:
 
-[!tablaSingleSiege](./images/tablaSingleSiege.png)
+![tablaSingleSiege](./images/tablaSingleSiege.png)
 
 ##### Seccion 3: _OpenWebLoad_
 
@@ -55,4 +55,4 @@ openload -l 20 http://192.168.210.128/ 1000
 
 Para tener medidas apropriadas, vamos a tomar las mediciones mas de una vez, en particular 10 veces y obtenemos la siguiente tabla:
 
-[!tablaSingleOpenWebLoad](./images/tablaSingleOpenWebLoad.png)
+![tablaSingleOpenWebLoad](./images/tablaSingleOpenWebLoad.png)
