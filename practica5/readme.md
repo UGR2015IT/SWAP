@@ -47,10 +47,10 @@ mysql > FLUSH TABLES WITH READ LOCK;
 mysql > quit
 ```
 
-Ahora, habria que generar un fichero SQL y enviarlo a la maquina M2 de manera que pueda hacer su copia de la BD _swap_. Sin embargo, las maquinas M1 y M2 ya estan conectada por SSH con claves compartidas: de esta manera seria mejor utilizar ssh en un pipe para hacer todo en automatico:
+Ahora, habria que generar un fichero SQL y enviarlo a la maquina M2 de manera que pueda hacer su copia de la BD _swap_. Sin embargo, las maquinas M1 y M2 ya estan conectada por SSH con claves compartidas: de esta manera seria mejor utilizar ssh en un pipe para hacer todo en automatico, despues haber creado en la M2 el database _swap_:
 
 ```
-$ mysqldump swap -u root -p | ssh ubuntu@192.168.210.129 mysql
+$ mysqldump swap -u root -p'root' | ssh 192.168.210.129 mysql -u root -p'root' swap 
 ```
 
 Importante es desbloquear las tablas de la maquina M1!
@@ -60,3 +60,5 @@ $ mysql -u root -p
 
 mysql > UNLOCK TABLES;
 ```
+
+![mysqldump](./images/mysqldump.PNG)
