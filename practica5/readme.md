@@ -120,3 +120,19 @@ Comprobamos todos mostrando informaciones en el esclavo:
 Comprobamos que hya actualizacion en frente a una modifica en el maestro:
 
 ![finalcheck](./images/finalcheck.PNG)
+
+### Seccion 4: Configuracion maestro-maestro
+
+Ahora queremos que las modificas se actualizen en ambos sentidos. Ya està configurado el sentido M1->M2, ahora falta el otro. Para hacer esto, serìa suficiente hacer de manera que la maquina M1 se porte como esclavo para la M2, como hecho por el apartado 3.
+
+1. Creamos un usuario esclavo en la m2, con el que la M1 pueda acceder y replicar
+
+![m2mastercfg](./images/m2mastercfg.PNG)
+
+2. En la M1 ahora escalva, damos los datos del nuevo maestro
+
+![m1slave](./images/m1slave.PNG)
+
+3. Comprobamos el funcionamento
+
+![finalcheck2](./images/finalcheck2.PNG)
