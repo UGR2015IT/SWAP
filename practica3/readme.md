@@ -27,14 +27,14 @@ Empezamos configurando el servicio _nginx_ modificando el fichero de configuraci
             }
         }
 
-![default.conf](./images/nginx-defaultconf.png)
+![default.conf](./images/nginx-defaultconf.PNG)
 
 Una vez reiniciado el servicio de _nginx_, el balanceador empieza a redireccionar el trafico que llega a el mismo a las dos maquinas de la granja repartendolo por turnos (round-robin). Esto se puede comprobar hacendo una descarga de las paginas web de las dos maquinas que, si modificadas previamente, seran distintas.
 
         curl http://192.168.210.130
     curl http://192.168.210.130
 
-![exitoP3](./images/exitonginx.png)
+![exitoP3](./images/exitonginx.PNG)
 
 Probamos ahora el funcionamiento con algoritmo en ponderacion, con la prioridad de la maquina M2 dos veces la de M1. Serà suficiente insertar las siguientes lineas en el mismo fichero _/etc/nginx/conf.d/default.conf_ :
 
@@ -43,7 +43,7 @@ Probamos ahora el funcionamiento con algoritmo en ponderacion, con la prioridad 
             server 192.168.210.129 weight=2;
         }
 
-![exitoP3](./images/exitonginxweight.png)
+![exitoP3](./images/exitonginxweight.PNG)
 
 ##### Seccion 2: _Haproxy_
 
@@ -64,11 +64,11 @@ Arrancamos una maquina virtual M31@192.168.210.132 que tiene instalado haproxy. 
         server m1 172.16.168.130:80 maxconn 32
         server m2 172.16.168.131:80 maxconn 32
 
-![confighaproxy](./images/exitonginx.png)
+![confighaproxy](./images/exitonginx.PNG)
 
 y comprobamos que todo funcione bien:
 
-![exitohaproxy](./images/exitohaproxy.png)
+![exitohaproxy](./images/exitohaproxy.PNG)
 
 Es posible configurar la granja para que la maquina M2 tenga mas peso que la M1, y comprobamos esta configuracion:
 
@@ -76,7 +76,7 @@ Es posible configurar la granja para que la maquina M2 tenga mas peso que la M1,
         server m1 172.16.168.130:80 maxconn 32 weight 1
         server m2 172.16.168.131:80 maxconn 32 weight 2
 
-![confighaproxyweight](./images/confighaproxyweight.png)
+![confighaproxyweight](./images/confighaproxyweight.PNG)
 
 
-![exitohaproxyweight](./images/exitohaproxyweight.png)
+![exitohaproxyweight](./images/exitohaproxyweight.PNG)
