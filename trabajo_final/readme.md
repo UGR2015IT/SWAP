@@ -70,3 +70,20 @@ y será posible ver la aplicacion cargando la dirección [localhost:3000](http:/
 
 La configuracion por defecto de express-generator es crear un esqueleto de aplicacion basada en _jade_. Si en crear la aplicacion se añade el parametro **-e** o **--ejs**, se pasa el suporto al motor ejs, ideal para _Typescript_ y entonces aprovechar de front-end framework como Angular 2. Para mas detalles, seguir esta [guía](http://goo.gl/d4Wkw5). Buscar también mas informaciones sobre "MEAN Stack", u seguir esta [guía](https://scotch.io/tutorials/setting-up-a-mean-stack-single-page-application).
 
+### Codigo para server HTTP con Express
+
+    var express = require('express'), http = require('http');
+    var app = express();
+    
+    app.use(express.static(__dirname + '/public'));
+    app.set('views',__dirname+'/views');
+    app.set('view engine','ejs');
+    
+    app.get('/',function(req,res){
+        res.render('index',function(err,html){
+            res.send(html);
+        })
+    });
+    
+    http.createServer(app).listern(8080);
+    
