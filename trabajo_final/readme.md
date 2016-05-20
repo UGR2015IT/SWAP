@@ -112,6 +112,8 @@ La configuracion por defecto de express-generator es crear un esqueleto de aplic
     
 ### Exito benchmarking
 
+    INSERIR AQUI CAPTURA DE BENCHMARKING
+
 ### Codigo para server HTTP con Express y carga de fichero html
 
     var express = require('express'), http = require('http');
