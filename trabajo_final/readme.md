@@ -70,14 +70,47 @@ y será posible ver la aplicacion cargando la dirección [localhost:3000](http:/
 
 La configuracion por defecto de express-generator es crear un esqueleto de aplicacion basada en _jade_. Si en crear la aplicacion se añade el parametro **-e** o **--ejs**, se pasa el suporto al motor ejs, ideal para _Typescript_ y entonces aprovechar de front-end framework como Angular 2. Para mas detalles, seguir esta [guía](http://goo.gl/d4Wkw5). Buscar también mas informaciones sobre "MEAN Stack", u seguir esta [guía](https://scotch.io/tutorials/setting-up-a-mean-stack-single-page-application).
 
-### Codigo para server HTTP con Node.js puro
+### Codigo para server HTTP con Node.js puro usado para el benchmarking
 
-    var http = require('http');
+    var http = require('http'), fs = require('fs');
     http.createServer(function(req,res){
-        res.writeHead(200, {'Content-Type':'text/plain'});
-        res.end('Hello world\n');   
+        fs.readFile("index.html",function(err,data){
+            res.writeHead(200, {'Content-Type':'text/plain'});
+            res.write(data);
+            res.end();
+        });
     }).listen(8080,"0.0.0.0");
     console.log('Server running at 0.0.0.0:8080');
+
+### Codigo JS que aprovecha multi-threading [libreria Cluster]
+
+    var cluster = require('cluster'),
+        numCPUs = require('os').cpus().length,
+        http = require('http'),
+        fs = require('fs');
+    if (cluster.isMaster) {
+        for (var i = 0; i < numCPUs; i++) {
+            cluster.fork();
+        }
+    }
+    else {
+        http.createServer(function (request, response) {
+            fs.readFile("index.html", function (err, file) {
+                response.writeHead(200, {"Content-Type": "text/html"});
+                response.write(file);
+                response.end();
+            });
+        }).listen(8080,"0.0.0.0");
+    }
+    
+### Codigo PHP usado para benchmarking
+
+    <?php
+        header('Content-Type: text/html');
+        echo file_get_contents('index.html');
+    ?>
+    
+### Exito benchmarking
 
 ### Codigo para server HTTP con Express y carga de fichero html
 
