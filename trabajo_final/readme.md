@@ -110,6 +110,14 @@ La configuracion por defecto de express-generator es crear un esqueleto de aplic
         echo file_get_contents('index.html');
     ?>
     
+### Tipo de benchmarking
+
+Se han hechos tests con ApacheBenchmarking, 10000 peticiones y nivel de concurrencia 1000.
+
+    ab -n 10000 -c 1000 http://192.168.210.130/
+    
+**NB**: La direccion 192.168.210.130 es la direccion de un servidor que actue como Load Balancer con Nginx.
+    
 ### Exito benchmarking
 
     INSERIR AQUI CAPTURA DE BENCHMARKING
