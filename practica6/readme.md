@@ -66,3 +66,35 @@ Comprobamos el estado final del RAID:
 
 ![raidfinal](./images/raidfinal.PNG)
 
+### Sección Opcional: Servidor NFS con RAID
+
+Los conocimientos para hacer esta sección provienen de la web, en particular nos referimos a [este](http://www.ite.educacion.es/formacion/materiales/85/cd/linux/m4/instalacin_y_configuracin_de_nfs.html) enclace.
+
+En esta sección queremos compartir el directorio _/dat/_ previamente creado en la maquina _RAID@192.168.210.133_ con otras maquinas en la misma red, en particular con la _M1@192.168.210.128_. Esto es posible con un servidor NFS. Para poder compartir carpetas en la red mediante NFS, en el PC servidor es necesario instalar el paquete del servidor NFS:
+
+    sudo apt-get install nfs-common nfs-kernel-server
+    
+Una vez instalado, pasamos a la configuración del servicio NFS, en particular el fichero _/etc/exports/_; en cada linea especificamos la carpeta a compartir, el modo en que se comparte, y a cual PCs se permite el acceso, especificando nombres o rango de IP. Primero, quitamos los permisos especificos del directorio /dat/ en el que hemos montado el RAID, y luego configuramos el fichero _/etc/exports/_:
+
+    sudo chown nobody:nogroup /dat/
+    sudo nano /etc/exports
+    
+Y ponemos:
+
+    /dat 192.168.210.128(rw,sync)
+    
+Actuamos las modificaciones y arrancamos el servicio nfs-kernel-server:
+
+    sudo exportfs -a
+    sudo service nfs-kernel-service start    
+    
+![exportfs](./images/exportfs.PNG)
+    
+Y comprobamos desde la maquina _M1@192.168.210.128_ que, despues de haber instalado el servicio NFS y de haber montado la carpeta remota, se pueda ver el directorio _/dat/_; en la M1:
+
+    sudo apt-get install nfs-common
+    sudo mkdir /dat
+    sudo mount 192.168.210.133:/dat /dat
+    df -h
+    
+![df](./images/df.PNG)
