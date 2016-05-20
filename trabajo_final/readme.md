@@ -1,4 +1,14 @@
-# Eatpas para instalar un servidor Node.js en Ubuntu
+# Node.js : javascript lado servidor
+
+Presentacion hecha por:
+- Davide Gallitelli
+- Juan Ramon Mossa
+
+## Algunas informacciones generales
+
+
+
+## Etapas para instalar un servidor Node.js en Ubuntu
 
 Aqui voy a describir las etapas para instalar un servidor node.js de aplicaciones 
     
@@ -36,6 +46,10 @@ Para ejecutar la nuestra aplicacion ejecutamos en consola:
 
     node app.js
     
+NB: puede pasar que node no se ponga en el $PATH automaticamente. Si pasa esto, es suficiente ejecutar la orden
+
+    ln -s /usr/bin/nodejs /usr/bin/node
+    
 ### Express application generator
 
 El modulo _express_ proporciona una herramienta de creacion de esqueleto de aplicacion a través de _express-generator_
@@ -53,3 +67,6 @@ y _express-generator_ crea automaticamente la estructura de la aplicacion. Ahora
     DEBUG=myapp:* npm start
     
 y será posible ver la aplicacion cargando la dirección [localhost:3000](http://localhost:3000/).
+
+La configuracion por defecto de express-generator es crear un esqueleto de aplicacion basada en _jade_. Si en crear la aplicacion se añade el parametro **-e** o **--ejs**, se pasa el suporto al motor ejs, ideal para _Typescript_ y entonces aprovechar de front-end framework como Angular 2. Para mas detalles, seguir esta [guía](http://goo.gl/d4Wkw5). Buscar también mas informaciones sobre "MEAN Stack".
+
