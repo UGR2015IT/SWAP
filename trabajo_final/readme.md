@@ -4,9 +4,19 @@ Presentacion hecha por:
 - Davide Gallitelli
 - Juan Ramon Mossa
 
+## Enclace a las trasparencias
+
+[Transparencias](http://slides.com/davidegallitelli/deck/fullscreen)
+
 ## Algunas informacciones generales
 
+Esta presentación es sobre Node.js.
 
+Node.js es una tecnologia que utiliza JavaScript como lenguaje de programación, con el fin de implementar el modelo orientado a eventos asíncronos y programación orientada a objetos de programación.
+
+Esto permite hacer que el software muy flexible y enormemente escalable, de modo que tenga un excelente rendimiento para la mayoría de las aplicaciones de Internet de hoy en día (enorme número de solicitudes, aplicaciones en tiempo real, etc.).
+
+Por otra parte, también puede actuar como software para el desarrollo, proporcionando un buen número de herramientas tales como tareas constructor, compilación y compresión, etc.
 
 ## Etapas para instalar un servidor Node.js en Ubuntu
 
