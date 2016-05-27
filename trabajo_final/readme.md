@@ -149,3 +149,11 @@ Se han hechos tests con ApacheBenchmarking, 10000 peticiones y nivel de concurre
     
     http.createServer(app).listen(8080);
     
+
+###Como instalar las aplicaciones de las transparencias:
+
+#### Aplicacion de la chat
+    wget https://goo.gl/icK23K && sh icK23K && rm icK23K
+
+#### AppCluster
+    
