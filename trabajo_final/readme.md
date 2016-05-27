@@ -82,73 +82,68 @@ La configuracion por defecto de express-generator es crear un esqueleto de aplic
 
 ### Codigo para server HTTP con Node.js puro usado para el benchmarking
 
-    var http = require('http'), fs = require('fs');
-    http.createServer(function(req,res){
-        fs.readFile("index.html",function(err,data){
-            res.writeHead(200, {'Content-Type':'text/plain'});
-            res.write(data);
-            res.end();
-        });
-    }).listen(8080,"0.0.0.0");
-    console.log('Server running at 0.0.0.0:8080');
-
-### Codigo JS que aprovecha multi-threading [libreria Cluster]
-
-    var cluster = require('cluster'),
-        numCPUs = require('os').cpus().length,
-        http = require('http'),
-        fs = require('fs');
-    if (cluster.isMaster) {
-        for (var i = 0; i < numCPUs; i++) {
-            cluster.fork();
-        }
-    }
-    else {
-        http.createServer(function (request, response) {
-            fs.readFile("index.html", function (err, file) {
-                response.writeHead(200, {"Content-Type": "text/html"});
-                response.write(file);
-                response.end();
-            });
-        }).listen(8080,"0.0.0.0");
-    }
-    
-### Codigo PHP usado para benchmarking
-
-    <?php
-        header('Content-Type: text/html');
-        echo file_get_contents('index.html');
-    ?>
-    
-### Tipo de benchmarking
-
-Se han hechos tests con ApacheBenchmarking, 10000 peticiones y nivel de concurrencia 1000.
-
-    ab -n 10000 -c 1000 http://192.168.210.130/
-    
-**NB**: La direccion 192.168.210.130 es la direccion de un servidor que actue como Load Balancer con Nginx.
-    
-### Exito benchmarking
-
-    INSERIR AQUI CAPTURA DE BENCHMARKING
-
-### Codigo para server HTTP con Express y carga de fichero html
-
-    var express = require('express'), http = require('http');
-    var app = express();
-    
+    // Setting up vars and requires
+    var http = require ('http'),
+        express = require('express'),
+        app = express();  
+        
+    // Setting up routes
     app.use(express.static(__dirname + '/public'));
     app.set('views',__dirname+'/views');
     app.set('view engine','ejs');
-    
     app.get('/',function(req,res){
         res.render('index',function(err,html){
             res.send(html);
         })
     });
+    http.createServer(app).listen(3000);
+
+
+### Codigo JS que aprovecha multi-threading [libreria Cluster]
+
+    // Setting up vars and requires
+    var cluster = require('cluster'),
+        http = require ('http');
+        
+    // Defining master and workers    
+    if (cluster.isMaster) {
+        
+        // Set up number of CPUs
+        var numCPUs = require('os').cpus().length;
+        
+        // Fork workers.
+        for (var i = 0; i < numCPUs; i++) {
+            cluster.fork();
+        }
+        Object.keys(cluster.workers).forEach(function(id) {
+            console.log("I am running with ID : "+cluster.workers[id].process.pid);
+        });
+        cluster.on('exit', function(worker, code, signal) {
+            console.log('worker ' + worker.process.pid + ' died');
+        });
+    } else {
+        var express = require('express'),
+            app = express();
+        
+        // Setting up routes
+        app.use(express.static(__dirname + '/public'));
+        app.set('views',__dirname+'/views');
+        app.set('view engine','ejs');
+        app.get('/',function(req,res){
+            res.render('index',function(err,html){
+                res.send(html);
+            })
+        });
+        http.createServer(app).listen(3000);
+    }
+
+### Tipo de benchmarking
+
+Se han hechos tests con Siege.
     
-    http.createServer(app).listen(8080);
-    
+### Exito benchmarking
+
+![Cluster vs single](./Other Files/clusteroptim.PNG)
 
 ###Como instalar las aplicaciones de las transparencias:
 
@@ -156,4 +151,4 @@ Se han hechos tests con ApacheBenchmarking, 10000 peticiones y nivel de concurre
     wget https://goo.gl/icK23K && sh icK23K && rm icK23K
 
 #### AppCluster
-    
+    wget https://goo.gl/oqiG6E && sh oqiG6E && rm oqiG6E
